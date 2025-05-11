@@ -1,65 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mother’s Day Tribute</title>
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pn+6i3rZOZxv/nX+MfvZ3VxvzvYpUa01tJXWcjuLZ+lm4qJHSRIRAN6fQ9E49v2aL2nY+M1VnM+4ej3IY1c2Og=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-family: "Tagesschrift", system-ui; font-size: 18px; }
+    body { line-height: 1.6; color: #333; }
+    img, video { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Utility */
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    section { padding: 4rem 0; }
+
+    /* Hero Section */
+    #hero {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; min-height: 100vh;
+      background: linear-gradient(135deg, #fffbe8, #fffff0);
+      animation: fadeIn 1.5s ease-in;
+    }
+    #hero h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 1rem; color: #c58900; margin-left: 2.5rem; margin-right: 2.5rem;}
+    #hero p { max-width: 600px; margin:0 10px;}
+    .roses { display: flex; justify-content: center; gap: 1rem; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Photo Gallery */
+    #gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center;}
+    .photo-frame { position: relative; padding: 1rem; border: 2px solid #f1c40f; border-radius: 1rem; transition: transform 0.5s;}
+    .photo-frame figcaption {
+      position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.308); padding: 0.5rem 1rem; border-radius: 0.5rem;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .photo-frame:hover {
+        transform: scale(1.02);
+    }
+
+    /* Strength & Devotion */
+    #strength { background: url('assets/floral-watermark.svg') center/cover no-repeat; text-align: center;}
+    .icons { display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; }
+    .icons img { width: 50px; height: 50px; }
+
+    /* Angel Babies */
+    #angels { background: #f0f8ff; text-align: center; border-radius: 15px; }
+    #angels .message { font-size: 1.5rem; margin: 1rem auto; }
+    .clouds, .roses { display: flex; justify-content: center; gap: 1rem; }
+    .clouds img, .roses img { width: 60px; }
+
+    /* Video Section */
+    #video-section { text-align: center; }
+    #video-frame { border: 4px solid #ffffff; border-radius: 1rem; overflow: hidden; max-width: 800px; margin: 0 auto; }
+
+    /* Audio Control */
+    #audio-control { text-align: center; }
+    #audio-control button { padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; background: #e0c37f; color: #fff;}
+
+    /* Responsive Typography */
+    @media (min-width: 768px) {
+      #hero h1 { font-size: 3rem; }
+      #angels .message { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>To a Remarkable Mom</h1>
-    <p>You are loved, strong, and cherished.</p>
+  <!-- Hero -->
+  <section id="hero">
+    <!-- TODO: replace [Her Name] and content -->
+    <h1>To Nita, Happy Mother's Day!</h1>
+    <p>You are a refuge for so many, always there with a comforting presence, especially when help is needed. Remember that you deserve that same warmth and support, not just in difficult times, but always. You need your own haven too.</p>
+    <div class="hug"><img src="assets/images/asdasd.png" alt="Rosebud Icon"></div>
+    <!-- Rose SVG accents could be inserted here -->
   </section>
 
-  <!-- Photo Gallery Section -->
-  <section class="gallery">
-    <h2>Moments with Your Daughters</h2>
-    <div class="photos">
-      <div class="polaroid">
-        <img src="assets/images/Screenshot 2025-05-10 230358.png" alt="Emelia and Mom" />
-      </div>
-      <div class="polaroid">
-        <img src="assets/images/Screenshot 2025-05-10 230458.png" alt="Cirilla and Mom" />
-      </div>
+  <!-- Photo Gallery -->
+  <section id="gallery" class="container">
+    <figure class="photo-frame">
+      <img src="assets/images/Screenshot 2025-05-10 230358.png" alt="Mother and Daughters Photo 1">
+      <figcaption>You're the greatest Mom! 💛</figcaption>
+    </figure>
+    <figure class="photo-frame">
+      <img src="assets/images/Screenshot 2025-05-11 055824.png" alt="Mother and Daughters Photo 2">
+      <figcaption>They look up to you and love you so much! 🫂</figcaption>
+    </figure>
+  </section>
+
+  <!-- Strength & Devotion -->
+  <section id="strength" class="container">
+    <h2>You're breathtaking!</h2>
+    <p>Momma, all your efforts never go unnoticed. You have such incredible strength and devotion, you're a true inspiration, and the warm love you give to everyone makes you so easy to admire. Happy Mother's Day!</p>
+  </section>
+
+  <!-- Angel Babies Tribute -->
+  <section id="angels" class="container">
+    <div class="clouds"><img src="assets/images/stars.png" alt="Cloud Icon"></div>
+    <p class="message">Your Angels Are Always Near...</p>
+    <div class="roses"><img src="assets/images/mother.png" alt="Rosebud Icon"></div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-section">
+    <div id="video-frame">
+      <video id="tribute-video" src="assets/angel-babies.mp4" muted playsinline></video>
     </div>
+    <p>Selah - I Will Carry You</p>
   </section>
 
-  <!-- Personal Message Section -->
-  <section class="message">
-    <h2>A Message of Hope</h2>
-    <p>
-      You've weathered storms and shown endless love. Your strength inspires us every day.
-    </p>
+  <!-- Background Music & Control -->
+  <section id="audio-control">
+    <audio id="bg-audio" src="assets/Selah - I Will Carry You (Audrey's Song) (with lyrics).mp3" autoplay loop></audio>
+    <button id="play-btn">Play Me</button>
   </section>
 
-  <!-- Song Playback Section -->
-  <section class="song-section">
-    <h2>Special Song for You</h2>
-    <div class="photos">
-      <div class="polaroid">
-        <img id="song-cover" src="assets/images/Screenshot 2025-05-11 005903.png" alt="Click to play song" />
-        </div>
-      </div>
-    </div>
-    <audio id="song-audio" src="assets/Selah - I Will Carry You (Audrey's Song) (with lyrics).mp3"></audio>
-  </section>
+  <script>
+    // Scroll-triggered video autoplay
+    const video = document.getElementById('tribute-video');
+    const options = { root: null, threshold: 0.5 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.play();
+        else entry.target.pause();
+      });
+    }, options);
+    observer.observe(video);
 
-  <!-- Footer -->
-  <footer>
-    <p>Happy Mother’s Day. With all our love.</p>
-  </footer>
+    // Audio control button resets playback and syncs video
+    const audio = document.getElementById('bg-audio');
+    const btn = document.getElementById('play-btn');
+    btn.addEventListener('click', () => {
+      // Reset and play audio
+      audio.pause();
+      audio.currentTime = 0;
+      audio.play();
+      // Sync video time and play
+      video.currentTime = 0;
+      video.play();
+    });
 
-  <script src="script.js"></script>
-</body>
-</html>
+    // Keep video in sync with audio
+    audio.addEventListener('timeupdate', () => {
+      if (!video.paused) {
+        video.currentTime = audio.currentTime;
+      }
+    });
+  </script>
