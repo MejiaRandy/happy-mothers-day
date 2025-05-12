@@ -1,3 +1,5 @@
+// Just a comment
+
 // Progressive enhancement
 document.documentElement.classList.remove('no-js');
 document.getElementById('loader').remove();
